@@ -12,3 +12,9 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+# add cpu temperature 
+patch -p1 < package/my/add-patch_sun8i-h3-ths.patch
+#cup mod
+sed -i 's/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE/CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND/g' target/linux/sunxi/config-5.4
+#add usb_gadget
+cat package/my/sunxi-config >> target/linux/sunxi/config-5.4
