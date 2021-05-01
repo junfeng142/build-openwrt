@@ -14,5 +14,8 @@
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #add extra packages
 git clone https://github.com/junfeng142/openwrt-packages package/my
+#add kernel patches
+rm -rf target/linux/sunxi/patches-5.4
+git clone git@github.com:junfeng142/patches-5.4.git target/linux/sunxi/patches-5.4
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
