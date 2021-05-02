@@ -19,3 +19,5 @@ sed -i 's/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE/CONFIG_CPU_FREQ_DEFAULT_GOV_ON
 sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:5e:32:02 g_ether.host_addr=f8:dc:7a:5e:32:01/g' package/boot/uboot-sunxi/uEnv-default.txt
 #add usb_gadget
 cat package/my/sunxi-config >> target/linux/sunxi/config-5.4
+#add chinese
+for dir in $(realpath $(find package/lean -type d -name po)); do ln -s $dir/zh-cn $dir/zh_Hans; done
