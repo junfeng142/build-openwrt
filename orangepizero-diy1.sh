@@ -11,6 +11,6 @@
 #
 
 # Uncomment a feed source
-sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #add extra packages
 git clone https://github.com/junfeng142/openwrt-packages package/my
