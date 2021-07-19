@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  FEEDS_CONF: OpenWrt-orangepizero.conf.default
+  FEEDS_CONF: OpenWrt-orangepizero.feeds.default
   CONFIG_FILE: OpenWrt-orangepizero.config
   DIY_P1_SH: orangepizero-diy1.sh
   DIY_P2_SH: orangepizero-diy2.sh
