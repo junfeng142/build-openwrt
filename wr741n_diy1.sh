@@ -11,4 +11,4 @@
 #
 
 #add extra packages
-git clone https://github.com/junfeng142/openwrt-packages package/my
+#git clone https://github.com/junfeng142/openwrt-packages package/my
