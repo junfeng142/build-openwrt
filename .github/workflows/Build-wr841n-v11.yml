@@ -22,10 +22,10 @@ on:
 env:
   REPO_URL: https://github.com/junfeng142/lede
   REPO_BRANCH: old
-  FEEDS_CONF: wr741n.feeds.default
+  FEEDS_CONF: ar7xx.feeds.default
   CONFIG_FILE: wr841n.config
-  DIY_P1_SH: wr741n_diy1.sh
-  DIY_P2_SH: wr741n_diy2.sh
+  DIY_P1_SH: ar7xx_diy1.sh
+  DIY_P2_SH: ar7xx_diy2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
