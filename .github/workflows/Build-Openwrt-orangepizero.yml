@@ -22,15 +22,15 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  FEEDS_CONF: Openwrt-orangepizero.feeds.default
-  CONFIG_FILE: Openwrt-orangepizero.config
-  DIY_P1_SH: orangepizero-diy1.sh
-  DIY_P2_SH: orangepizero-diy2.sh
+  FEEDS_CONF: orangepizero/feeds.conf.default
+  CONFIG_FILE: orangepizero/openwrt.config
+  DIY_P1_SH: orangepizero/diy1.sh
+  DIY_P2_SH: orangepizero/diy2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: true
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:
