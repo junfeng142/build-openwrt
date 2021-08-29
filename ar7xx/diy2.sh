@@ -15,4 +15,4 @@
 #rm node
 #rm -rf feeds/packages/lang/node
 #add upx
-mv ./upx ./staging_dir/host/bin && chmod +x staging_dir/host/bin/upx
+#mv ./upx ./staging_dir/host/bin && chmod +x staging_dir/host/bin/upx
