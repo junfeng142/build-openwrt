@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/junfeng142/openwrt.git
-  REPO_BRANCH: master
+  REPO_BRANCH: old
   FEEDS_CONF: ar7xx/feeds.conf.default
   CONFIG_FILE: ar7xx/wr841n.config
   DIY_P1_SH: ar7xx/diy1.sh
