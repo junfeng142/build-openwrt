@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build Openwrt-orangepizero
+name: Build orangepizero-latest
 
 on:
   repository_dispatch:
@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: orangepizero/feeds.conf.default
-  CONFIG_FILE: orangepizero/openwrt.config
+  CONFIG_FILE: orangepizero/latest.config
   DIY_P1_SH: orangepizero/diy1.sh
   DIY_P2_SH: orangepizero/diy2.sh
   UPLOAD_BIN_DIR: false
