@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/junfeng142/openwrt.git
-  REPO_BRANCH: master
+  REPO_BRANCH: 20915
   FEEDS_CONF: orangepizero/feeds.conf.stable
   CONFIG_FILE: orangepizero/stable.config
   DIY_P1_SH: orangepizero/diy-stable1.sh
