@@ -11,4 +11,4 @@
 #
 
 #add extra packages
-#git clone https://github.com/junfeng142/openwrt-packages package/my
+git clone -b master https://github.com/small-5/luci-app-adblock-plus.git package/my
