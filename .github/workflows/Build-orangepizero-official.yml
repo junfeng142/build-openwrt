@@ -24,8 +24,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: orangepizero/feeds.conf.official
   CONFIG_FILE: orangepizero/official.config
-  DIY_P1_SH: orangepizero/diy-stable1.sh
-  DIY_P2_SH: orangepizero/diy-stable2.sh
+  DIY_P1_SH: orangepizero/diy-official1.sh
+  DIY_P2_SH: orangepizero/diy-official2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
