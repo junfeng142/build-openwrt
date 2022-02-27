@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build CR660x
+name: Build JDC-1
 
 on:
   repository_dispatch:
@@ -20,12 +20,12 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
-  FEEDS_CONF: MT7621A/feeds.conf.default
-  CONFIG_FILE: MT7621A/CR660x.config
-  DIY_P1_SH: MT7621A/diy1.sh
-  DIY_P2_SH: MT7621A/diy2.sh
+  REPO_URL: https://github.com/junfeng142/openwrt.git
+  REPO_BRANCH: 20915
+  FEEDS_CONF: mt762x/jdc.feeds.conf
+  CONFIG_FILE: mt762x/jdc.config
+  DIY_P1_SH: mt762x/jdc-diy1.sh
+  DIY_P2_SH: mt762x/jdc-diy2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
