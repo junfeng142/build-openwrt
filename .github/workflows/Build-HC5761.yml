@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build orangepizero-stable
+name: Build HC5761
 
 on:
   repository_dispatch:
@@ -22,10 +22,10 @@ on:
 env:
   REPO_URL: https://github.com/junfeng142/openwrt.git
   REPO_BRANCH: 20915
-  FEEDS_CONF: orangepizero/feeds.conf.stable
-  CONFIG_FILE: orangepizero/stable.config
-  DIY_P1_SH: orangepizero/diy-stable1.sh
-  DIY_P2_SH: orangepizero/diy-stable2.sh
+  FEEDS_CONF: mt762x/5761.feeds.conf
+  CONFIG_FILE: mt762x/5761.config
+  DIY_P1_SH: mt762x/5761-diy1.sh
+  DIY_P2_SH: mt762x/5761-diy2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
