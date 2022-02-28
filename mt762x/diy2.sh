@@ -12,3 +12,5 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+# Change version for batman-adv
+sed -i 's/2019.2/2017.3/g' feeds/routing/batman-adv/Makefile
