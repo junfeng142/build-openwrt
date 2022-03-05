@@ -16,5 +16,3 @@
 mv ./upx ./staging_dir/host/bin && chmod +x ./staging_dir/host/bin/upx
 # update golang
 rm -rf ./feeds/packages/lang/golang && mv ./package/my/golang ./feeds/packages/lang
-# update kcptun
-rm -rf./feeds/packages/net/kcptun && mv ./package/my/kcptun ./feeds/packages/net
