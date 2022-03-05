@@ -16,5 +16,3 @@ sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generat
 mv ./upx ./staging_dir/host/bin && chmod +x staging_dir/host/bin/upx
 # update golang
 rm -rf ./feeds/packages/lang/golang && mv ./package/my/golang ./feeds/packages/lang
-# update kcptun
-rm -rf./feeds/packages/net/kcptun && mv ./package/my/kcptun ./feeds/packages/net
