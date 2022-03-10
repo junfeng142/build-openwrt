@@ -16,3 +16,5 @@ sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generat
 mv ./upx ./staging_dir/host/bin && chmod +x staging_dir/host/bin/upx
 # helloworld
 sed -i '/PACKAGE_libustream/d' feeds/helloworld/luci-app-ssr-plus/Makefile
+# golang
+rm -rf ./feeds/packages/lang/golang && cp -r ./package/my/golang ./feeds/packages/lang
