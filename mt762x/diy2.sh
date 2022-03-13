@@ -15,4 +15,4 @@
 # add upx
 mv ./upx ./staging_dir/host/bin && chmod +x ./staging_dir/host/bin/upx
 # helloworld
-sed -i '/PACKAGE_libustream/d' feeds/helloworld/luci-app-ssr-plus/Makefile
+#sed -i '/PACKAGE_libustream/d' feeds/helloworld/luci-app-ssr-plus/Makefile
