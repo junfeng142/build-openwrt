@@ -14,8 +14,8 @@
 # Uncomment a feed source
 sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
 # adbyby
-sed -i '/uclient-fetch/wget-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/adblock.sh
-sed -i '/uclient-fetch/wget-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/adbybyupdate.sh
-sed -i '/uclient-fetch/wget-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/admem.sh
-sed -i '/uclient-fetch/wget-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/adupdate.sh
-sed -i '/uclient-fetch/wget-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/rule-update
+sed -i '/uclient\-fetch/wget\-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/adblock.sh
+sed -i '/uclient\-fetch/wget\-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/adbybyupdate.sh
+sed -i '/uclient\-fetch/wget\-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/admem.sh
+sed -i '/uclient\-fetch/wget\-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/adupdate.sh
+sed -i '/uclient\-fetch/wget\-ssl/g' package/my/luci-app-adbyby-plus/root/usr/share/adbyby/rule-update
