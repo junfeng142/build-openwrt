@@ -12,4 +12,4 @@
 #
 
 # Uncomment a feed source
-sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
+#sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
