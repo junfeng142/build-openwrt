@@ -11,4 +11,4 @@
 #
 
 #add extra packages
-git clone -b master https://github.com/small-5/luci-app-adblock-plus.git package/my/luci-app-adblock-plus
+#git clone -b master https://github.com/small-5/luci-app-adblock-plus.git package/my/luci-app-adblock-plus
