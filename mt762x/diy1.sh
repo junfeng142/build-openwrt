@@ -16,3 +16,4 @@
 
 # kernel patch
 patch -p1 < diff.patch
+patch -p1 < kernel.patch
