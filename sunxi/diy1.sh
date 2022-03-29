@@ -10,7 +10,7 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# Replace network interface
+sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
 #add extra packages（lede）
 #git clone -b master https://github.com/junfeng142/packages.git package/my
