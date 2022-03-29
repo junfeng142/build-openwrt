@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/junfeng142/openwrt.git
   REPO_BRANCH: master
-  FEEDS_CONF: sunxi/feeds.conf.defau
+  FEEDS_CONF: sunxi/feeds.conf.default
   CONFIG_FILE: sunxi/orangepizero.config
   DIY_P1_SH: sunxi/diy1.sh
   DIY_P2_SH: sunxi/diy2.sh
