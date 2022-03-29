@@ -12,5 +12,5 @@
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-#add extra packages
-git clone -b master https://github.com/junfeng142/packages.git package/my
+#add extra packages（lede）
+#git clone -b master https://github.com/junfeng142/packages.git package/my
