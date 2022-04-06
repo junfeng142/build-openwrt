@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build Miwifi-mini
+name: Build WR619AC
 
 on:
   repository_dispatch:
@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/junfeng142/openwrt.git
   REPO_BRANCH: stable
   FEEDS_CONF: mt762x/feeds.conf.default
-  CONFIG_FILE: mt762x/miwifi.config
+  CONFIG_FILE: mt762x/wr619ac.config
   DIY_P1_SH: mt762x/diy1.sh
   DIY_P2_SH: mt762x/diy2.sh
   UPLOAD_BIN_DIR: true
