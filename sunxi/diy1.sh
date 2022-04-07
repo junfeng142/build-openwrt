@@ -15,7 +15,7 @@
 
 # cup mod
 #sed -i 's/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE/CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND/g' target/linux/sunxi/config-5.4（kernel-5.4）
-#sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:5e:32:02 g_ether.host_addr=f8:dc:7a:5e:32:01/g' package/boot/uboot-sunxi/uEnv-default.txt
-sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:60:34:04 g_ether.host_addr=f8:dc:7a:60:34:03/g' package/boot/uboot-sunxi/uEnv-default.txt
+sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:5e:32:02 g_ether.host_addr=f8:dc:7a:5e:32:01/g' package/boot/uboot-sunxi/uEnv-default.txt
+#sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:60:34:04 g_ether.host_addr=f8:dc:7a:60:34:03/g' package/boot/uboot-sunxi/uEnv-default.txt
 # Replace network interface
 sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
