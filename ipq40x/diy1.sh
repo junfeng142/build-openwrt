@@ -14,5 +14,4 @@
 #sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
 
 # kernel patch
-patch -p1 < generic.patch
-patch -p1 < ipq40x.patch
+#patch -p1 < ipq40x.patch
