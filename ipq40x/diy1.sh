@@ -16,6 +16,3 @@
 # kernel patch
 patch -p1 < generic.patch
 patch -p1 < ipq40x.patch
-
-# rename
-mv target/linux/ipq40xx/files-4.14 target/linux/ipq40xx/files
