@@ -15,5 +15,4 @@
 #sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
 
 # kernel patch
-patch -p1 < generic.patch
-patch -p1 < ramips.patch
+#patch -p1 < ramips.patch
