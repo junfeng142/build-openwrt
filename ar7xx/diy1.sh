@@ -10,5 +10,9 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-#add extra packages
+# add extra packages
 #git clone -b master https://github.com/small-5/luci-app-adblock-plus.git package/my/luci-app-adblock-plus
+
+# Modify image size
+sed -i 's/tplink-8mlzma/tplink-16mlzma/g' target/linux/ar71xx/image/tiny-tp-link.mk
+
