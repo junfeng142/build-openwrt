@@ -14,7 +14,7 @@
 #git clone -b master https://github.com/small-5/luci-app-adblock-plus.git package/my/luci-app-adblock-plus
 
 # fit mac80211
-patch -p1 < ../ar7xx.patch
+patch -p1 < $GITHUB_WORKSPACE/ar7xx.patch
 
 # Modify image size
 sed -i 's/tplink-8mlzma/tplink-16mlzma/g' target/linux/ar71xx/image/tiny-tp-link.mk
