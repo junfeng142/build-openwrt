@@ -2,4 +2,6 @@ src-git packages https://github.com/junfeng142/packages.git;openwrt-19.07
 src-git luci https://git.openwrt.org/project/luci.git;openwrt-19.07
 src-git routing https://git.openwrt.org/feed/routing.git;openwrt-19.07
 #src-git telephony https://git.openwrt.org/feed/telephony.git;openwrt-19.07
-src-git helloworld https://github.com/fw876/helloworld
+#src-git helloworld https://github.com/fw876/helloworld
+src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;packages
+src-git pwluci https://github.com/xiaorouji/openwrt-passwall.git;luci
