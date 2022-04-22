@@ -22,6 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/junfeng142/openwrt.git
   REPO_BRANCH: stable
+  FEEDS_CONF: ipq40x/feeds.conf.default
   CONFIG_FILE: ipq40x/wr619ac.config
   DIY_P1_SH: ipq40x/diy1.sh
   DIY_P2_SH: ipq40x/diy2.sh
