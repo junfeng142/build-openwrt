@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/junfeng142/openwrt.git
   REPO_BRANCH: master
-  FEEDS_CONF: mt762x/feeds.conf.jdc
+  FEEDS_CONF: mt762x/feeds.conf.default
   CONFIG_FILE: mt762x/jdc.config
   DIY_P1_SH: mt762x/diy1.sh
   DIY_P2_SH: mt762x/diy2.sh
