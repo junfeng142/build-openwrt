@@ -11,6 +11,9 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
+# clone ssr
+git clone -b ssr https://github.com/junfeng142/packages.git package/ssr
+
 # Uncomment a feed source
 #sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
 
