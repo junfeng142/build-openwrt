@@ -9,3 +9,7 @@
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
+
+# clon passwall
+git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
