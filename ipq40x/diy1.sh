@@ -10,9 +10,12 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-# clon passwall
+# clone passwall
 git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+
+# clone theme
+git clone https://github.com/lynxnexy/luci-theme-tano.git package/luci-theme-tano
 
 # Uncomment a feed source
 #sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
