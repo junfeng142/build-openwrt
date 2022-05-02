@@ -15,14 +15,18 @@ patch -p1 < package/my/cputemp/add-patch_dts_file-wifi-xradio.patch
 patch -p1 < package/my/cputemp/add-patch_sun8i-h3-ths.patch
 patch -p1 < package/my/cputemp/add-patch_sun8i-spi0flash_16M-usb2-usb3-uart1-uart2.patch
 
-# add extra packages（lede）
-#git clone -b master https://github.com/junfeng142/packages.git package/my
+# clone passwall
+git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+
+# clone own
+git clone https://github.com/junfeng142/packages.git package/own 
 
 # clone helloworld
-git clone https://github.com/fw876/helloworld.git package/helloworld
+#git clone https://github.com/fw876/helloworld.git package/helloworld
 
 # cup mod
-#sed -i 's/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE/CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND/g' target/linux/sunxi/config-4.14
+sed -i 's/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE/CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND/g' target/linux/sunxi/config-4.14
 
 # usbphy mac
 sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:5e:32:02 g_ether.host_addr=f8:dc:7a:5e:32:01/g' package/boot/uboot-sunxi/uEnv-default.txt
