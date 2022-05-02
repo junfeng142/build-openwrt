@@ -10,11 +10,6 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-# add wifi/cputemp/usb/uart
-patch -p1 < package/my/cputemp/add-patch_dts_file-wifi-xradio.patch
-patch -p1 < package/my/cputemp/add-patch_sun8i-h3-ths.patch
-patch -p1 < package/my/cputemp/add-patch_sun8i-spi0flash_16M-usb2-usb3-uart1-uart2.patch
-
 # clone passwall
 git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
@@ -22,11 +17,20 @@ git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/pass
 # clone own
 git clone https://github.com/junfeng142/packages.git package/own 
 
-# clone helloworld
+# helloworld
 #git clone https://github.com/fw876/helloworld.git package/helloworld
+#sed -i '/PACKAGE_libustream/d' feeds/helloworld/luci-app-ssr-plus/Makefile
+
+# add wifi/cputemp/usb/uart
+patch -p1 < package/own/patches/add-patch_dts_file-wifi-xradio.patch
+patch -p1 < package/own/patches/add-patch_sun8i-h3-ths.patch
+patch -p1 < package/own/patches/add-patch_sun8i-spi0flash_16M-usb2-usb3-uart1-uart2.patch
 
 # cup mod
 sed -i 's/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE/CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND/g' target/linux/sunxi/config-4.14
+
+#add usb_gadget
+cat package/own/configs/sunxi-config >> target/linux/sunxi/config-4.14
 
 # usbphy mac
 sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:5e:32:02 g_ether.host_addr=f8:dc:7a:5e:32:01/g' package/boot/uboot-sunxi/uEnv-default.txt
