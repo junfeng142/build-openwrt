@@ -27,10 +27,10 @@ patch -p1 < package/own/patches/add-patch_sun8i-h3-ths.patch
 patch -p1 < package/own/patches/add-patch_sun8i-spi0flash_16M-usb2-usb3-uart1-uart2.patch
 
 # cup mod
-sed -i 's/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE/CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND/g' target/linux/sunxi/config-4.14
+#sed -i 's/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE/CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND/g' target/linux/sunxi/config-5.4
 
 #add usb_gadget
-cat package/own/configs/sunxi-config >> target/linux/sunxi/config-4.14
+#cat package/own/configs/sunxi-config >> target/linux/sunxi/config-5.4
 
 # usbphy mac
 sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:5e:32:02 g_ether.host_addr=f8:dc:7a:5e:32:01/g' package/boot/uboot-sunxi/uEnv-default.txt
