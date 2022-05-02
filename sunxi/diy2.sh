@@ -10,19 +10,11 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-# add cpu temperature（lede）
-#patch -p1 < package/my/add-patch_sun8i-h3-ths.patch
-#add usb_gadget（lede）
-#cat package/my/sunxi-config >> target/linux/sunxi/config-5.4
-
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.4/g' package/base-files/files/bin/config_generate
 
 # add upx
 mv ./upx ./staging_dir/host/bin && chmod +x staging_dir/host/bin/upx
-
-# helloworld
-#sed -i '/PACKAGE_libustream/d' feeds/helloworld/luci-app-ssr-plus/Makefile
 
 # golang
 rm -rf ./feeds/packages/lang/golang && cp -r ./package/own/golang ./feeds/packages/lang
