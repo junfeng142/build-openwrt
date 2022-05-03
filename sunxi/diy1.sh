@@ -25,6 +25,7 @@ git clone https://github.com/junfeng142/packages.git package/own
 patch -p1 < package/own/patches/add-patch_dts_file-wifi-xradio.patch
 patch -p1 < package/own/patches/add-patch_sun8i-h3-ths.patch
 patch -p1 < package/own/patches/add-patch_sun8i-spi0flash_16M-usb2-usb3-uart1-uart2.patch
+patch -p1 < package/own/patches/mac80211.patch
 
 # cup mod
 #sed -i 's/CONFIG_CPU_FREQ_DEFAULT_GOV_PERFORMANCE/CONFIG_CPU_FREQ_DEFAULT_GOV_ONDEMAND/g' target/linux/sunxi/config-5.4
