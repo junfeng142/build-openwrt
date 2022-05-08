@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/junfeng142/openwrt.git
   REPO_BRANCH: master
   FEEDS_CONF: software/feeds.conf.default
-  CONFIG_FILE: software/mipsel.config
+  CONFIG_FILE: software/software.config
   DIY_P1_SH: software/diy1.sh
   DIY_P2_SH: software/diy2.sh
   UPLOAD_BIN_DIR: true
