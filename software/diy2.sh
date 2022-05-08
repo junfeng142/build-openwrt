@@ -9,3 +9,6 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
+
+# add upx
+mv ./upx ./staging_dir/host/bin && chmod +x ./staging_dir/host/bin/upx
