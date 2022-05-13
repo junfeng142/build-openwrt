@@ -18,8 +18,5 @@
 git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
 
-# clone own
-git clone https://github.com/junfeng142/packages.git package/own
-
 # Uncomment a feed source
 #sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
