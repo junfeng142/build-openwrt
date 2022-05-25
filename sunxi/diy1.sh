@@ -22,9 +22,9 @@ git clone https://github.com/junfeng142/packages.git package/own
 #sed -i '/PACKAGE_libustream/d' feeds/helloworld/luci-app-ssr-plus/Makefile
 
 # add wifi/cputemp/usb/uart
-#patch -p1 < package/own/patches/add-patch_dts_file-wifi-xradio.patch
-#patch -p1 < package/own/patches/add-patch_sun8i-h3-ths.patch
-#patch -p1 < package/own/patches/add-patch_sun8i-spi0flash_16M-usb2-usb3-uart1-uart2.patch
+patch -p1 < package/own/patches/add-patch_dts_file-wifi-xradio.patch
+patch -p1 < package/own/patches/add-patch_sun8i-h3-ths.patch
+patch -p1 < package/own/patches/add-patch_sun8i-spi0flash_16M-usb2-usb3-uart1-uart2.patch
 patch -p1 < package/own/patches/mac80211.patch
 
 # cup mod
@@ -34,8 +34,8 @@ patch -p1 < package/own/patches/mac80211.patch
 #cat package/own/configs/sunxi-config >> target/linux/sunxi/config-5.4
 
 # usbphy mac
-#sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:5e:32:02 g_ether.host_addr=f8:dc:7a:5e:32:01/g' package/boot/uboot-sunxi/uEnv-default.txt
-sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:60:34:04 g_ether.host_addr=f8:dc:7a:60:34:03/g' package/boot/uboot-sunxi/uEnv-default.txt
+sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:5e:32:02 g_ether.host_addr=f8:dc:7a:5e:32:01/g' package/boot/uboot-sunxi/uEnv-default.txt
+#sed -i 's/rootwait/rootwait g_ether.dev_addr=f8:dc:7a:60:34:04 g_ether.host_addr=f8:dc:7a:60:34:03/g' package/boot/uboot-sunxi/uEnv-default.txt
 
 # Replace network interface
 #sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
