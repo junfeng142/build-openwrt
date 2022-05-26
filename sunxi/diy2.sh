@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.0.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.8/g' package/base-files/files/bin/config_generate
 
 # fix bug luci-21.02
 #patch -p1 < package/own/patches/rpcd-mod-luci.patch
