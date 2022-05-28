@@ -17,5 +17,8 @@ git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/pass
 # clone own
 git clone https://github.com/junfeng142/packages.git package/own 
 
+# clone luci-app-amlogic
+git clone https://github.com/ophub/luci-app-amlogic.git package/own/luci-app-amlogic
+
 # display cpu temp
 #sed -i 's/thermal\/thermal_zone0\/temp/hwmon\/hwmon0\/temp1_input/g'  package/my/luci2-base/files/luci
