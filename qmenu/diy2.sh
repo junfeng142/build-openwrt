@@ -12,19 +12,3 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.31.188/g' package/base-files/files/bin/config_generate
-
-# add upx
-mv ./upx ./staging_dir/host/bin && chmod +x ./staging_dir/host/bin/upx
-
-# fix dhcp/dns
-patch -p1 < package/own/patches/dhcp-dns.patch
-
-# firewall custom
-echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
-
-# batman-adv
-#rm feeds/routing/batman-adv/patches/0004-Revert-batman-adv-genetlink-make-policy-common-to-fa.patch
-#rm feeds/routing/batman-adv/patches/0037-batman-adv-allow-netlink-usage-in-unprivileged-conta.patch
-
-# golang
-rm -rf ./feeds/packages/lang/golang && cp -r ./package/own/golang ./feeds/packages/lang
