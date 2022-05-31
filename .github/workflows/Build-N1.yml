@@ -132,8 +132,8 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: files/openwrt-update-amlogic
+        name: openwrt_armvirt_v8_${{ env.PACKAGED_OUTPUTDATE }}
+        path: ${{ env.PACKAGED_OUTPUTPATH }}/*
 
     - name: Organize files
       id: organize
