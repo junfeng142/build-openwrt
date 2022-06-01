@@ -27,7 +27,7 @@ env:
   DIY_P1_SH: qmenu/diy1.sh
   DIY_P2_SH: qmenu/diy2.sh
   FLIPPY_NAME: 73+o
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
@@ -124,7 +124,7 @@ jobs:
         sudo chmod -R 777 /opt
         sudo cp -r $GITHUB_WORKSPACE/openwrt/N1HK1dabao/${FLIPPY_NAME}/opt/* /opt
         cd /opt/openwrt_packit
-        sudo cp -r $GITHUB_WORKSPACE/openwrt/bin/targets/*/openwrt-armvirt-64-default-rootfs.tar.gz ./
+        sudo cp -r $GITHUB_WORKSPACE/openwrt/bin/targets/*/*.tar.gz ./
         sudo chmod +x *.sh
         sudo ./mk_s905d_n1.sh
         
