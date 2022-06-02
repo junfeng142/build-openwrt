@@ -132,15 +132,15 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: openwrt_armvirt_v8_${{ env.PACKAGED_OUTPUTDATE }}
-        path: ${{ env.PACKAGED_OUTPUTPATH }}/*
+        name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        path: $GITHUB_WORKSPACE/openwrt/bin
 
     - name: Organize files
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
-        cd openwrt/bin/targets/*/*
-        rm -rf packages
+        cd /opt/openwrt_packit/output
+        pigz -6 -p $(nproc) *.img
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
         
