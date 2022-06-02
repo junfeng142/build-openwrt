@@ -124,7 +124,7 @@ jobs:
         sudo chmod -R 777 /opt
         sudo cp -r $GITHUB_WORKSPACE/openwrt/N1HK1dabao/${FLIPPY_NAME}/opt/* /opt
         cd /opt/openwrt_packit
-        sudo cp -r $GITHUB_WORKSPACE/openwrt/bin/targets/*/*/bin.tar.gz ./
+        sudo cp -r $GITHUB_WORKSPACE/openwrt/bin/targets/*/*/*.tar.gz ./
         sudo chmod +x *.sh
         sudo ./mk_s905d_n1.sh
         
