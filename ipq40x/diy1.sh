@@ -12,8 +12,8 @@
 
 # clone passwall
 git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
-#git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
-git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall/luci
+git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+#git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall/luci
 
 # clone helloworld
 #git clone https://github.com/fw876/helloworld.git package/helloworld
