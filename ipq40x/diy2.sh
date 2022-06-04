@@ -26,5 +26,8 @@ rm feeds/routing/batman-adv/patches/0037-batman-adv-allow-netlink-usage-in-unpri
 # golang
 rm -rf ./feeds/packages/lang/golang && cp -r ./package/own/golang ./feeds/packages/lang
 
+# Modify
+sed -i 's/\"services\"/\"system\"/g' feeds/luci/applications/luci-app-ttyd/luasrc/controller/ttyd.lua
+
 # helloworld
 #sed -i '/PACKAGE_libustream/d' feeds/helloworld/luci-app-ssr-plus/Makefile
