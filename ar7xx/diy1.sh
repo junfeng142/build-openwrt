@@ -20,5 +20,5 @@ git clone https://github.com/junfeng142/packages.git package/own
 #patch -p1 < $GITHUB_WORKSPACE/ar7xx/ar7xx.patch
 
 # Modify image size
-#sed -i 's/tplink-8mlzma/tplink-16mlzma/g' target/linux/ar71xx/image/tiny-tp-link.mk
+sed -i 's/tplink-8mlzma/tplink-16mlzma/g' target/linux/ar71xx/image/tiny-tp-link.mk
 
