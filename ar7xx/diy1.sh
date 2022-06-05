@@ -10,11 +10,11 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-# add extra packages
-#git clone -b master https://github.com/small-5/luci-app-adblock-plus.git package/my/luci-app-adblock-plus
-
 # clone ssr
 git clone -b ssr https://github.com/junfeng142/packages.git package/ssr
+
+# clone own
+git clone https://github.com/junfeng142/packages.git package/own
 
 # fit mac80211
 #patch -p1 < $GITHUB_WORKSPACE/ar7xx/ar7xx.patch
