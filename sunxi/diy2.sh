@@ -16,8 +16,9 @@ sed -i 's/192.168.1.1/192.168.0.8/g' package/base-files/files/bin/config_generat
 # fix bug luci-21.02
 #patch -p1 < package/own/patches/rpcd-mod-luci.patch
 
-# fix dhcp/kvr
+# fix dhcp/kvr and cgi-io
 patch -p1 < package/own/patches/dhcp-kvr.patch
+patch -p1 < package/own/patches/cgi-io.patch
 
 # add upx
 mv ./upx ./staging_dir/host/bin && chmod +x staging_dir/host/bin/upx
