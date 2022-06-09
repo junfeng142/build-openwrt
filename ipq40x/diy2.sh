@@ -16,8 +16,9 @@ sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generat
 # add upx
 mv ./upx ./staging_dir/host/bin && chmod +x ./staging_dir/host/bin/upx
 
-# fix dhcp/kvr
+# fix dhcp/kvr and cgi-io
 patch -p1 < package/own/patches/dhcp-kvr.patch
+patch -p1 < package/own/patches/cgi-io.patch
 
 # batman-adv
 #rm feeds/routing/batman-adv/patches/0004-Revert-batman-adv-genetlink-make-policy-common-to-fa.patch
