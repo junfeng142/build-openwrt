@@ -11,7 +11,7 @@
 #
 
 # clone passwall
-#git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 #git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
 #git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall/luci
 
@@ -22,7 +22,7 @@ git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/junfeng142/packages.git package/own 
 
 # display cpu temp
-sed -i 's/thermal\/thermal_zone0\/temp/hwmon\/hwmon0\/temp1_input/g'  package/my/luci2-base/files/luci
+sed -i 's/thermal\/thermal_zone0\/temp/hwmon\/hwmon1\/temp1_input/g'  package/my/luci2-base/files/luci
 
 # Uncomment a feed source
 #sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
