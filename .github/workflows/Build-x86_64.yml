@@ -20,15 +20,15 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/junfeng142/openwrt.git
-  REPO_BRANCH: stable
-  FEEDS_CONF: x86_64/feeds.conf.default
-  CONFIG_FILE: x86_64/x86_64.config
-  DIY_P1_SH: x86_64/diy1.sh
-  DIY_P2_SH: x86_64/diy2.sh
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
+  FEEDS_CONF: qmenu/feeds.conf.default
+  CONFIG_FILE: qmenu/x86_64.config
+  DIY_P1_SH: qmenu/diy1.sh
+  DIY_P2_SH: qmenu/diy2.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: true
+  UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
