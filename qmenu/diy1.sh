@@ -14,6 +14,12 @@
 git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
 
+# clone helloworld
+git clone https://github.com/fw876/helloworld.git package/helloworld
+
+# clone bypass
+git clone https://github.com/kiddin9/openwrt-bypass.git package/bypass
+
 # clone luci-app-amlogic
 #git clone https://github.com/ophub/luci-app-amlogic.git package/own/luci-app-amlogic
 
