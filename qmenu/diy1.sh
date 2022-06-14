@@ -15,7 +15,7 @@ git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/
 git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
 
 # clone luci-app-amlogic
-git clone https://github.com/ophub/luci-app-amlogic.git package/own/luci-app-amlogic
+#git clone https://github.com/ophub/luci-app-amlogic.git package/own/luci-app-amlogic
 
 # clone N1HK1dabao
 git clone https://github.com/Netflixxp/N1HK1dabao.git N1HK1dabao
