@@ -1,13 +1,13 @@
 #!/bin/bash
 
-TAG=latest
+TAG=armv8
 if [ ! -z "$1" ];then
 	TAG=$1
 fi
 
 TMPDIR=openwrt_rootfs
 OUTDIR=dockerimgs/docker
-IMG_NAME=minirailgun/openwrt-aarch64
+IMG_NAME=javonca/openwrt
 
 [ -d "$TMPDIR" ] && rm -rf "$TMPDIR"
 
@@ -19,12 +19,9 @@ cp -f patches/cpustat "$TMPDIR/usr/bin/" && chmod 755 "$TMPDIR/usr/bin/cpustat" 
 cp -f patches/getcpu "$TMPDIR/bin/" && chmod 755 "$TMPDIR/bin/getcpu" && \
 cat patches/luci-admin-status-index-html.patch | (cd "$TMPDIR/usr/lib/lua/luci/view/admin_status/" && patch -p0) && \
 rm -f "$TMPDIR/etc/bench.log" && \
-sed -e 's/\/opt/\/etc/' -i "${TMPDIR}/etc/config/qbittorrent" && \
-sed -e "s/#PermitRootLogin prohibit-password/PermitRootLogin yes/" -i "${TMPDIR}/etc/ssh/sshd_config" && \
 sss=$(date +%s) && \
 ddd=$((sss/86400)) && \
-sed -e "s/:0:0:99999:7:::/:${ddd}:0:99999:7:::/" -i "${TMPDIR}/etc/shadow" && \
-echo "17 3 * * * /etc/coremark.sh" >> "$TMPDIR/etc/crontabs/root" && \
+echo "37 7 * * * /etc/coremark.sh" >> "$TMPDIR/etc/crontabs/root" && \
 rm -rf "$TMPDIR/lib/firmware/*" "$TMPDIR/lib/modules/*" && \
 (cd "$TMPDIR" && tar cf ../openwrt-armvirt-64-default-rootfs-patched.tar .) && \
 rm -f DockerImg-OpenwrtArm64-${TAG}.gz && \
