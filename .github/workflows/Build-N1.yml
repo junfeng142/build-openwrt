@@ -119,6 +119,13 @@ jobs:
       if: (!cancelled())
       run: df -hT
     
+    - name: Upload bin directory
+      uses: actions/upload-artifact@main
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
+      with:
+        name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        path: $GITHUB_WORKSPACE/openwrt/bin
+    
     - name: Build and push docker image
       id: push
       run: |
@@ -140,13 +147,6 @@ jobs:
         sudo cp -r $GITHUB_WORKSPACE/openwrt/bin/targets/*/*/*.tar.gz ./
         sudo chmod +x *.sh
         sudo ./mk_s905d_n1.sh
-        
-    - name: Upload bin directory
-      uses: actions/upload-artifact@main
-      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
-      with:
-        name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: $GITHUB_WORKSPACE/openwrt/bin
 
     - name: Organize files
       id: organize
