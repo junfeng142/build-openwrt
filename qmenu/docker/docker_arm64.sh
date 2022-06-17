@@ -21,9 +21,9 @@ cat patches/luci-admin-status-index-html.patch | (cd "$TMPDIR/usr/lib/lua/luci/v
 rm -f "$TMPDIR/etc/bench.log" && \
 echo "37 7 * * * /etc/coremark.sh" >> "$TMPDIR/etc/crontabs/root" && \
 rm -rf "$TMPDIR/lib/firmware/*" "$TMPDIR/lib/modules/*" && \
-(cd "$TMPDIR" && tar cf ../openwrt-armvirt-64-default-rootfs-patched.tar .) && \
+(cd "$TMPDIR" && tar cf ../openwrt-default-rootfs-patched.tar .) && \
 rm -f DockerImg-OpenwrtArm64-${TAG}.gz && \
-docker build --platforms=linux/arm64 -t ${IMG_NAME}:${TAG} . && \
-rm -f  openwrt-armvirt-64-default-rootfs-patched.tar && \
+docker build --build-arg arch=arm64 -t ${IMG_NAME}:${TAG} . && \
+rm -f  openwrt-default-rootfs-patched.tar && \
 rm -rf "$TMPDIR" && \
 docker save ${IMG_NAME}:${TAG} | pigz -9 > $OUTDIR/docker-img-openwrt-aarch64-${TAG}.gz
