@@ -27,6 +27,7 @@ env:
   DIY_P1_SH: qmenu/diy1.sh
   DIY_P2_SH: qmenu/diy2.sh
   DOCKER_BUILD_SH: docker.sh
+  TAG: arm64
   FLIPPY_NAME: 73+o
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -135,7 +136,7 @@ jobs:
         ./$DOCKER_BUILD_SH
         gzip -dc dockerimgs/docker/*.gz | docker load
         docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
-        docker push --platforms=linux/arm64 ${{ secrets.DOCKER_USERNAME }}/openwrt:armv8
+        docker push ${{ secrets.DOCKER_USERNAME }}/openwrt:$TAG
         echo "::set-output name=status::success"
     
     - name: Package firmware for OpenWrt
