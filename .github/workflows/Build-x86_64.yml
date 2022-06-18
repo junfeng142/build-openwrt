@@ -26,7 +26,8 @@ env:
   CONFIG_FILE: qmenu/x86_64.config
   DIY_P1_SH: qmenu/diy1.sh
   DIY_P2_SH: qmenu/diy2.sh
-  DOCKER_BUILD_SH: docker.sh
+  DOCKER_BUILD_SH: docker_amd64.sh
+  TAG: amd64
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -129,7 +130,7 @@ jobs:
         ./$DOCKER_BUILD_SH
         gzip -dc dockerimgs/docker/*.gz | docker load
         docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/openwrt:x86_64
+        docker push ${{ secrets.DOCKER_USERNAME }}/openwrt:$TAG
         echo "::set-output name=status::success"
 
     - name: Organize files
