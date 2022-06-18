@@ -136,7 +136,6 @@ jobs:
         ./$DOCKER_BUILD_SH
         gzip -dc dockerimgs/docker/*.gz | docker load
         docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
-        docker tag ${{ secrets.DOCKER_USERNAME }}/openwrt ${{ secrets.DOCKER_USERNAME }}/openwrt:$TAG
         docker push ${{ secrets.DOCKER_USERNAME }}/openwrt:$TAG
         echo "::set-output name=status::success"
     
