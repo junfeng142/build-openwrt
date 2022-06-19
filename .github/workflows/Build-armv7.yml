@@ -26,9 +26,10 @@ env:
   CONFIG_FILE: qmenu/armv7.config
   DIY_P1_SH: qmenu/diy1.sh
   DIY_P2_SH: qmenu/diy2.sh
-  DOCKER_BUILD_SH: docker.sh
+  DOCKER_BUILD_SH: docker_armv7.sh
+  TAG: armv7
   UPLOAD_BIN_DIR: true
-  UPLOAD_FIRMWARE: false
+  UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
@@ -36,7 +37,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
 
     steps:
     - name: Checkout
@@ -46,13 +47,9 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+       sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
         sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-1804)
-        sudo -E apt-get -qq install rename
-        sudo -E apt-get -qq install pigz
-        sudo -E apt-get -qq install time
-        sudo -E apt-get -qq install sshpass
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
@@ -134,7 +131,7 @@ jobs:
         ./$DOCKER_BUILD_SH
         gzip -dc dockerimgs/docker/*.gz | docker load
         docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/openwrt:armv7
+        docker push ${{ secrets.DOCKER_USERNAME }}/openwrt:$TAG
         echo "::set-output name=status::success"
 
     - name: Organize files
