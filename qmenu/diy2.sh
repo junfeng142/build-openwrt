@@ -11,10 +11,15 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.31.188/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.0.5/g' package/base-files/files/bin/config_generate
 
 # Modify
 sed -i 's/\"services\"/\"nas\"/g' feeds/luci/applications/luci-app-aliyundrive-webdav/luasrc/controller/aliyundrive-webdav.lua
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-aliyundrive-webdav/luasrc/view/aliyundrive-webdav/aliyundrive-webdav_log.htm
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-aliyundrive-webdav/luasrc/view/aliyundrive-webdav/aliyundrive-webdav_status.htm
 
+sed -i 's/\"services\"/\"nas\"/g' package/own/luci-app-aliyundrive-fuse/luasrc/controller/aliyundrive-fuse.lua
+sed -i 's/services/nas/g' package/own/luci-app-aliyundrive-fuse/luasrc/view/aliyundrive-fuse/aliyundrive-fuse_log.htm
+sed -i 's/services/nas/g' package/own/luci-app-aliyundrive-fuse/luasrc/view/aliyundrive-fuse/aliyundrive-fuse_status.htm
+
+sed -i 's/TTYD 终端/终端/g' feeds/luci/applications/luci-app-ttyd/po/zh-cn/terminal.po
