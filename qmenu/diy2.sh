@@ -23,3 +23,5 @@ sed -i 's/services/nas/g' package/own/luci-app-aliyundrive-fuse/luasrc/view/aliy
 sed -i 's/services/nas/g' package/own/luci-app-aliyundrive-fuse/luasrc/view/aliyundrive-fuse/aliyundrive-fuse_status.htm
 
 sed -i 's/TTYD 终端/终端/g' feeds/luci/applications/luci-app-ttyd/po/zh-cn/terminal.po
+
+sed -i 's/Turbo ACC 网络加速/网络加速/g' feeds/luci/applications/luci-app-turboacc/po/zh-cn/turboacc.po
