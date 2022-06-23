@@ -14,7 +14,7 @@ IMG_NAME=javonca/openwrt
 mkdir -p "$TMPDIR"  && \
 mkdir -p "$OUTDIR"  && \
 gzip -dc openwrt-*-rootfs.tar.gz | ( cd "$TMPDIR" && tar xf - ) && \
-cp -f patches/rc.local "$TMPDIR/etc/" && \
+cp -f rc.local "$TMPDIR/etc/" && \
 rm -f "$TMPDIR/etc/bench.log" && \
 echo "37 7 * * * /etc/coremark.sh" >> "$TMPDIR/etc/crontabs/root" && \
 rm -rf "$TMPDIR/lib/firmware/*" "$TMPDIR/lib/modules/*" && \
