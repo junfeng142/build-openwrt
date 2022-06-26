@@ -23,6 +23,9 @@ git clone https://github.com/kiddin9/openwrt-bypass.git package/bypass
 # clone own
 git clone https://github.com/junfeng142/packages.git package/own
 
+# Uncomment password
+sed -i '/shadow/s/^/#/g' package/lean/default-settings/files/zzz-default-settings
+
 # clone luci-app-amlogic
 #git clone https://github.com/ophub/luci-app-amlogic.git package/own/luci-app-amlogic
 
