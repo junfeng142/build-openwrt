@@ -11,15 +11,17 @@
 #
 
 # clone passwall
-git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
-git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+#git clone -b packages https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+#git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
 
 # clone own
 git clone https://github.com/junfeng142/packages.git package/own 
 
 # helloworld
-#git clone https://github.com/fw876/helloworld.git package/helloworld
-#sed -i '/PACKAGE_libustream/d' feeds/helloworld/luci-app-ssr-plus/Makefile
+git clone https://github.com/fw876/helloworld.git package/helloworld
+
+# clone bypass
+git clone https://github.com/kiddin9/openwrt-bypass.git package/bypass
 
 # add wifi/cputemp/usb/uart
 patch -p1 < package/own/patches/add-patch_dts_file-wifi-xradio.patch
