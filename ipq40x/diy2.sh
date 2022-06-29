@@ -27,9 +27,5 @@ patch -p1 < package/own/patches/cgi-io.patch
 # golang
 rm -rf ./feeds/packages/lang/golang && cp -r ./package/own/golang ./feeds/packages/lang
 
-# Modify
-sed -i 's/\"services\"/\"system\"/g' feeds/luci/applications/luci-app-ttyd/luasrc/controller/ttyd.lua
-sed -i 's/\(\"ttyd\"\)/\(\"ttyd\")\, 10/g' feeds/luci/applications/luci-app-ttyd/luasrc/controller/ttyd.lua
-
 # helloworld
 #sed -i '/PACKAGE_libustream/d' feeds/helloworld/luci-app-ssr-plus/Makefile
