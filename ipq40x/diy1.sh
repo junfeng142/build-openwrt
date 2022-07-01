@@ -22,7 +22,10 @@ git clone https://github.com/fw876/helloworld.git package/helloworld
 git clone https://github.com/kiddin9/openwrt-bypass.git package/bypass
 
 # clone own
-git clone https://github.com/junfeng142/packages.git package/own 
+git clone https://github.com/junfeng142/packages.git package/own
+
+# clone aliyun
+git clone https://github.com/messense/aliyundrive-webdav.git package/aliyundrive
 
 # display cpu temp
 sed -i 's/thermal\/thermal_zone0\/temp/hwmon\/hwmon1\/temp1_input/g'  package/my/luci2-base/files/luci
