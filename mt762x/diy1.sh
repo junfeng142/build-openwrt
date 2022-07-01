@@ -21,5 +21,8 @@ git clone -b ssr https://github.com/junfeng142/packages.git package/ssr
 # clone own
 git clone https://github.com/junfeng142/packages.git package/own 
 
+# clone aliyun
+git clone https://github.com/messense/aliyundrive-webdav.git package/aliyundrive
+
 # Uncomment a feed source
 #sed -i '/network/s/^/#/g' package/my/default-settings/files/zzz-default-settings
