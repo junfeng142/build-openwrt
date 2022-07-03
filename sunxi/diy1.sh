@@ -23,6 +23,10 @@ git clone https://github.com/fw876/helloworld.git package/helloworld
 # clone bypass
 git clone https://github.com/kiddin9/openwrt-bypass.git package/bypass
 
+# clone aliyun
+git clone https://github.com/messense/aliyundrive-webdav.git package/aliyunwebd
+git clone https://github.com/messense/aliyundrive-fuse.git package/aliyunfuse
+
 # add wifi/cputemp/usb/uart
 patch -p1 < package/own/patches/add-patch_dts_file-wifi-xradio.patch
 patch -p1 < package/own/patches/add-patch_sun8i-h3-ths.patch
