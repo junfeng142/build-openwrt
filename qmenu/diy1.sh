@@ -23,6 +23,10 @@ git clone https://github.com/kiddin9/openwrt-bypass.git package/bypass
 # clone own
 git clone https://github.com/junfeng142/packages.git package/own
 
+# clone aliyun
+git clone https://github.com/messense/aliyundrive-webdav.git package/aliyunwebd
+git clone https://github.com/messense/aliyundrive-fuse.git package/aliyunfuse
+
 # Uncomment password
 sed -i '/shadow/s/^/#/g' package/lean/default-settings/files/zzz-default-settings
 
