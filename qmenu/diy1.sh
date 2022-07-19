@@ -18,7 +18,7 @@
 git clone https://github.com/fw876/helloworld.git package/helloworld
 
 # clone bypass
-git clone https://github.com/kiddin9/openwrt-bypass.git package/bypass
+#git clone https://github.com/kiddin9/openwrt-bypass.git package/bypass
 
 # clone own
 git clone https://github.com/junfeng142/packages.git package/own
